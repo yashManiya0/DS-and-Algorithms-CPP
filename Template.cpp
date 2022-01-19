@@ -13,6 +13,8 @@ using namespace std;
 #define vll                     vector<ll>
 #define vii                     vector<int>
 #define pb                      push_back
+#define yep                     cout<<"YES"<<endl;
+#define nope                    cout<<"NO"<<endl;
 #define boost                   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 #define forl(i,n)               for(int i=0;i<n;i++)
 #define itr(i,a,b)              for(int i=a;(b>=a)?i<b:i>b;(b>=a)?i++:i--)
@@ -40,10 +42,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin>>n;
-
-        // code goes here
+        
     }
     return 0;
 }
