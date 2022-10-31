@@ -1,6 +1,6 @@
 /*
     Author :        YASH MANIYA (codheck_0) [B20CS033]
-    Template :      https://github.com/yashmaniya0/DS-and-Algorithms-CPP/edit/master/template.cpp
+    Template :      https://github.com/yashmaniya0/DS-and-Algorithms-CPP/blob/master/template.cpp
     
     Already fallen,
     Now is the time to RISE !!!
