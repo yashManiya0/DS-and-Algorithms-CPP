@@ -1,4 +1,11 @@
-// Author ~ Yash Maniya
+/*
+    Author :        YASH MANIYA (codheck_0) [B20CS033]
+    Template :      https://github.com/yashmaniya0/DS-and-Algorithms-CPP/edit/master/template.cpp
+    
+    Already fallen,
+    Now is the time to RISE !!!
+
+*/
 
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
@@ -6,7 +13,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// -------- Extra Macros ------------------------------------------------------------------------------------
+// -------- Extra Macros ---------------------------------------------------------------------------------------------
 #define curtime                 chrono::high_resolution_clock::now()
 #define tdif(start,end)         chrono::duration_cast<chrono::microseconds>(end - start).count()
 #define timedif(start,end)      ((long double)tdif(start,end))*1e-6
@@ -17,10 +24,10 @@ auto t0 = curtime;
 #define BG                      "\033[1m\033[32m"      // Bold Green
 #define BY                      "\033[1m\033[33m"      // Bold Yellow
 #define BB                      "\033[1m\033[34m"      // Bold Blue
-// ----------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------
 
 
-// -------- Macros ------------------------------------------------------------------------------------------
+// -------- Macros ---------------------------------------------------------------------------------------------------
 #define int                     long long int
 #define ull                     unsingned long long
 #define ff                      first
@@ -55,27 +62,30 @@ auto t0 = curtime;
 #define min4(a,b,c,d)           min(d, min(c, min(a, b)))
 #define max3(a,b,c)             max(c, max(a, b))
 #define max4(a,b,c,d)           max(d, max(c, max(a, b)))
-// -----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 
 
-// ------ Global Constants -----------------------------------------------------------------------------------
+// ------ Global Constants --------------------------------------------------------------------------------------------
 const int MOD = 1e9 + 7;
 const int MAX_ARR = 2*1e5 + 1;
 const int MAXX = INT_MAX;
 const int MINN = INT_MIN;
-// -----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 
 
-// ------ Debugging Macros & Templates -----------------------------------------------------------------------
+// ------ Debugging Macros & Templates --------------------------------------------------------------------------------
 #ifndef ONLINE_JUDGE
-#define dbgR(x...)          cerr << BR << #x << RESET << " = " << BB; __print(x);
-#define dbgG(x...)          cerr << BG << #x << RESET << " = " << BB; __print(x);
-#define dbgY(x...)          cerr << BY << #x << RESET << " = " << BB; __print(x);
-#define dbg(x...)           dbgR(x)
-#define delim ", "
+#define dbgR(x...)               cerr << BR << #x << RESET << " = " << BB; __print(x);
+#define dbgG(x...)               cerr << BG << #x << RESET << " = " << BB; __print(x);
+#define dbgY(x...)               cerr << BY << #x << RESET << " = " << BB; __print(x);
+#define dbg(x...)                dbgR(x)
 #else
 #define dbg(x...)
+#define dbgR(x...)
+#define dbgG(x...)
+#define dbgY(x...)
 #endif
+#define delim ", "
 
 void _print(int t) {cerr << t;}
 void _print(char t) {cerr << t;}
@@ -89,16 +99,19 @@ void __print() {cerr << "\n" << RESET;}
 template <typename T, typename V> void _print(pair <T, V> &p) {cerr << "{"; _print(p.ff); cerr << ","; _print(p.ss); cerr << "}";}
 template <typename T> void _print(vector <T> &v) {int ctr=v.size(); cerr << "[ "; for (T i : v) {_print(i); cerr << ((--ctr)?delim:" ");} cerr << "]";}
 template <typename T> void _print(set <T> &v) {int ctr=v.size(); cerr << "[ "; for (T i : v) {_print(i); cerr << ((--ctr)?delim:" ");} cerr << "]";}
+template <typename T> void _print(unordered_set <T> &v) {int ctr=v.size(); cerr << "[ "; for (T i : v) {_print(i); cerr << ((--ctr)?delim:" ");} cerr << "]";}
 template <typename T> void _print(multiset <T> &v) {int ctr=v.size(); cerr << "[ "; for (T i : v) {_print(i); cerr << ((--ctr)?delim:" ");} cerr << "]";}
 template <typename T, typename V> void _print(map <T, V> &v) {int ctr=v.size(); cerr << "[ "; for (auto i : v) {_print(i); cerr << ((--ctr)?delim:" ");} cerr << "]";}
+template <typename T, typename V> void _print(unordered_map <T, V> &v) {int ctr=v.size(); cerr << "[ "; for (auto i : v) {_print(i); cerr << ((--ctr)?delim:" ");} cerr << "]";}
 template <typename T, typename... V> void __print(T t, V... v) {_print(t); if (sizeof...(v)) cerr << ", "; __print(v...);}
 
-// -----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 
 
-// -----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 //                                       *** SOLN STARTS FROM HERE ***
-// -----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
+
 void solve(){
     int n;
     cin>>n;
@@ -126,12 +139,12 @@ signed main()
         cerr<<breakcase<<endl;
     }
 
-    #ifndef printExeTime
+    #ifndef ONLINE_JUDGE
         cerr<< BG << "\nExecution Time: "<<timedif(t0,curtime) <<" s\n" << RESET;
     #endif
 }
 
-// -----------------------------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------------------------------
 
 
 // ------- codheck_0 --------------------------------------------------------------------------------------------------
@@ -147,7 +160,7 @@ signed main()
 //       '   ; :__  |   :    | '   ; |:  | |  |  ' | : '   ;   /| '   ; :__  |  | ' \ \          ___  '   ;  \; /  | 
 //       '   | '.'|  \   \  /  |   | '/  ' |  :  :_:,' '   |  / | '   | '.'| '  : |--'        .'  .`|  \   \  ',  /  
 //       |   :    :   `----'   |   :    :| |  | ,'     |   :    | |   :    : ;  |,'        .'  .'   :   ;   :    /   
-//        \   \  /              \   \  /   `--''        \   \  /   \   \  /  '--'       ,---, '   .'     \   \ .'    
+//        \   \  /              \   \  /   `--''        \   \  /   \   \  /  '--'       ,---, '   .'     \   \ .'
 //         `----'                `----'                  `----'     `----'              ;   |  .'         `---`      
 //                                                                                      `---'                        
 //
