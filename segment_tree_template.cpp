@@ -1,9 +1,9 @@
 /*
-    Author :     YASH MANIYA (codheck_0) [B20CS033]
+    Author :        YASH MANIYA (codheck_0) [B20CS033]
+    Template :      https://github.com/yashmaniya0/DS-and-Algorithms-CPP/blob/master/segment_tree_template.cpp
     
     Already fallen,
     Now is the time to RISE !!!
-
 */
 
 #pragma GCC optimize("Ofast")
