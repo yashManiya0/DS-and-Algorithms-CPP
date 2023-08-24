@@ -1,9 +1,8 @@
 /*
-    Author :        YASH MANIYA (codheck_0) [B20CS033]
+    Author :        YASH MANIYA [B20CS033]
     Template :      https://github.com/yashmaniya0/DS-and-Algorithms-CPP/blob/master/template.cpp
-    
-    Already fallen,
-    Now is the time to RISE !!!
+
+    Time to RISE !!!
 
 */
 
@@ -38,18 +37,15 @@ auto t0 = curtime;
 #define sii                     set<int>
 #define mii                     map<int, int>
 #define umii                    unordered_map<int, int>
-#define mivi                    map<int, vii>
-#define umivi                   unordered_map<int, vii>
 #define effi(x)                 x.max_load_factor(0.2);     // takes greater space to avoid collisions
 #define pb                      push_back
+#define sp                      " "
 #define yep                     cout<<"YES"<<endl;
 #define nope                    cout<<"NO"<<endl;
 #define neg1                    cout<<-1<<endl;
 #define boost                   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
 #define forl(i,n)               for(int i=0;i<n;i++)
 #define itr(i,a,b)              for(int i=a;(b>=a)?i<b:i>b;(b>=a)?i++:i--)
-#define print_arr(arr,n)        forl(i,n){cout<<arr[i]<<" ";}cout<<endl;
-#define print_vec(v)            for(auto i:v){cout<<i<<" ";}cout<<endl;
 #define print_arr2d(arr,n,m)    forl(i,n){forl(j,m){cout<<arr[i][j]<<' ';}cout<<endl;}
 #define input(arr,n)            forl(i,n){cin>>arr[i];}
 #define input_arr2d(arr, n, m)  forl(i,n){forl(j,m){cin>>arr[i][j];}}
@@ -143,25 +139,3 @@ signed main()
         cerr<< BG << "\nExecution Time: "<<timedif(t0,curtime) <<" s\n" << RESET;
     #endif
 }
-
-// --------------------------------------------------------------------------------------------------------------------
-
-
-// ------- codheck_0 --------------------------------------------------------------------------------------------------
-//
-//                                           ,---,                                 ,-.                    ,----..    
-//                                   ,---, ,--.' |                             ,--/ /|                   /   /   \   
-//                     ,---.       ,---.'| |  |  :                           ,--. :/ |                  /   .     :  
-//                    '   ,'\      |   | : :  :  :                           :  : ' /                  .   /   ;.  \ 
-//          ,---.    /   /   |     |   | | :  |  |,--.    ,---.      ,---.   |  '  /                  .   ;   /  ` ; 
-//         /     \  .   ; ,. :   ,--.__| | |  :  '   |   /     \    /     \  '  |  :                  ;   |  ; \ ; | 
-//        /    / '  '   | |: :  /   ,'   | |  |   /' :  /    /  |  /    / '  |  |   \                 |   :  | ; | ' 
-//       .    ' /   '   | .; : .   '  /  | '  :  | | | .    ' / | .    ' /   '  : |. \                .   |  ' ' ' : 
-//       '   ; :__  |   :    | '   ; |:  | |  |  ' | : '   ;   /| '   ; :__  |  | ' \ \          ___  '   ;  \; /  | 
-//       '   | '.'|  \   \  /  |   | '/  ' |  :  :_:,' '   |  / | '   | '.'| '  : |--'        .'  .`|  \   \  ',  /  
-//       |   :    :   `----'   |   :    :| |  | ,'     |   :    | |   :    : ;  |,'        .'  .'   :   ;   :    /   
-//        \   \  /              \   \  /   `--''        \   \  /   \   \  /  '--'       ,---, '   .'     \   \ .'
-//         `----'                `----'                  `----'     `----'              ;   |  .'         `---`      
-//                                                                                      `---'                        
-//
-// ------- ps : search for "https://codeforces.com/profile/codheck_0"  -------------------------------------------------
