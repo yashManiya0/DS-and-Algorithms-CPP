@@ -13,51 +13,49 @@
 using namespace std;
 
 // -------- Extra Macros ---------------------------------------------------------------------------------------------
-#define curtime                 chrono::high_resolution_clock::now()
-#define tdif(start,end)         chrono::duration_cast<chrono::microseconds>(end - start).count()
-#define timedif(start,end)      ((long double)tdif(start,end))*1e-6
+#define curtime                     chrono::high_resolution_clock::now()
+#define tdif(start,end)             chrono::duration_cast<chrono::microseconds>(end - start).count()
+#define timedif(start,end)          ((long double)tdif(start,end))*1e-6
 auto t0 = curtime;
 
-#define RESET                   "\033[0m"
-#define BR                      "\033[1m\033[31m"      // Bold Red
-#define BG                      "\033[1m\033[32m"      // Bold Green
-#define BY                      "\033[1m\033[33m"      // Bold Yellow
-#define BB                      "\033[1m\033[34m"      // Bold Blue
+#define RESET                       "\033[0m"
+#define BR                          "\033[1m\033[31m"      // Bold Red
+#define BG                          "\033[1m\033[32m"      // Bold Green
+#define BY                          "\033[1m\033[33m"      // Bold Yellow
+#define BB                          "\033[1m\033[34m"      // Bold Blue
 // -------------------------------------------------------------------------------------------------------------------
 
 
 // -------- Macros ---------------------------------------------------------------------------------------------------
-#define int                     long long int
-#define ull                     unsingned long long
-#define ff                      first
-#define ss                      second
-#define pii                     pair<int,int>
-#define vii                     vector<int>
-#define usii                    unordered_set<int>
-#define sii                     set<int>
-#define mii                     map<int, int>
-#define umii                    unordered_map<int, int>
-#define effi(x)                 x.max_load_factor(0.2);     // takes greater space to avoid collisions
-#define pb                      push_back
-#define sp                      " "
-#define yep                     cout<<"YES"<<endl;
-#define nope                    cout<<"NO"<<endl;
-#define neg1                    cout<<-1<<endl;
-#define boost                   ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
-#define forl(i,n)               for(int i=0;i<n;i++)
-#define itr(i,a,b)              for(int i=a;(b>=a)?i<b:i>b;(b>=a)?i++:i--)
-#define print_arr2d(arr,n,m)    forl(i,n){forl(j,m){cout<<arr[i][j]<<' ';}cout<<endl;}
-#define input(arr,n)            forl(i,n){cin>>arr[i];}
-#define input_arr2d(arr, n, m)  forl(i,n){forl(j,m){cin>>arr[i][j];}}
-#define sprec(x,y)              fixed<<setprecision(y)<<x
-#define all(v)                  v.begin(),v.end()
-#define rall(v)                 v.rbegin(),v.rend()
-#define gcd(a,b)                __gcd(a,b)
-#define lcm(a,b)                ((a)*(b)) / __gcd((a),(b))
-#define min3(a,b,c)             min(c, min(a, b))
-#define min4(a,b,c,d)           min(d, min(c, min(a, b)))
-#define max3(a,b,c)             max(c, max(a, b))
-#define max4(a,b,c,d)           max(d, max(c, max(a, b)))
+#define int                         long long int
+#define ull                         unsingned long long
+#define ff                          first
+#define ss                          second
+#define pii                         pair<int,int>
+#define vii                         vector<int>
+#define usii                        unordered_set<int>
+#define sii                         set<int>
+#define mii                         map<int, int>
+#define umii                        unordered_map<int, int>
+#define effi(x)                     x.max_load_factor(0.2);     // takes greater space to avoid collisions
+#define pb                          push_back
+#define sp                          " "
+#define yep                         cout<<"YES"<<endl;
+#define nope                        cout<<"NO"<<endl;
+#define neg1                        cout<<-1<<endl;
+#define boost                       ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define forl(i,n)                   for (int i = 0; i < n; i++)
+#define itr(i,a,b)                  for(int i=a; (b>=a)?i<b:i>b; (b>=a)?i++:i--);
+#define input(arr,n)                forl(i,n){cin>>arr[i];}
+#define print_vec(v)                for(auto x: v){cout<<x<<sp;} cout<<endl;
+#define all(v)                      v.begin(),v.end()
+#define rall(v)                     v.rbegin(),v.rend()
+#define gcd(a,b)                    __gcd(a,b)
+#define lcm(a,b)                    ((a)*(b)) / __gcd((a),(b))
+#define min3(a,b,c)                 min(c, min(a, b))
+#define min4(a,b,c,d)               min(d, min(c, min(a, b)))
+#define max3(a,b,c)                 max(c, max(a, b))
+#define max4(a,b,c,d)               max(d, max(c, max(a, b)))
 // --------------------------------------------------------------------------------------------------------------------
 
 
@@ -71,10 +69,10 @@ const int MINN = INT_MIN;
 
 // ------ Debugging Macros & Templates --------------------------------------------------------------------------------
 #ifndef ONLINE_JUDGE
-#define dbgR(x...)               cerr << BR << #x << RESET << " = " << BB; __print(x);
-#define dbgG(x...)               cerr << BG << #x << RESET << " = " << BB; __print(x);
-#define dbgY(x...)               cerr << BY << #x << RESET << " = " << BB; __print(x);
-#define dbg(x...)                dbgR(x)
+#define dbgR(x...)                  cerr << BR << #x << RESET << " = " << BB; __print(x);
+#define dbgG(x...)                  cerr << BG << #x << RESET << " = " << BB; __print(x);
+#define dbgY(x...)                  cerr << BY << #x << RESET << " = " << BB; __print(x);
+#define dbg(x...)                   dbgR(x)
 #else
 #define dbg(x...)
 #define dbgR(x...)
